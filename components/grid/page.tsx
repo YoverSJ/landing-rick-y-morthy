@@ -42,7 +42,16 @@ const people = [
 ]
 
 
+const getCharacters = async () => {
+  const res = await fetch('https://rickandmortyapi.com/api/character')
+  const data = await res.json()
+  return data.results
+}
+
 const Grid = () => {
+  getCharacters().then((data) => {
+    console.log(data)
+  })
   return (
     <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     {people.map((person) => (
