@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -37,7 +37,7 @@ const Hero = () => {
               onClick={() => setAbrirMenuMobile(true)}
             >
               <span className="sr-only">Abrir Menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
@@ -73,7 +73,7 @@ const Hero = () => {
                 onClick={() => setAbrirMenuMobile(false)}
               >
                 <span className="sr-only">Close menu</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                <XIcon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
             <div className="mt-6 flow-root">
